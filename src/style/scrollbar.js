@@ -20,7 +20,7 @@ theme.light`
   --scrollbar-thumb-bg-hover: black;
 `
 
-theme.xelis`
+theme.dapa`
   --scrollbar-width: .45em;
   --scrollbar-height: .45em;
   --scrollbar-track-bg: rgb(0 0 0 / 50%);

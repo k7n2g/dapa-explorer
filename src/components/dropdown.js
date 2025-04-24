@@ -6,7 +6,7 @@ import theme from '../style/theme'
 
 const defaultStyle = {
   container: css`
-    --dropdown-bg-color: ${theme.apply({ xelis: '#101010', dark: 'var(--bg-color)', light: 'var(--bg-color)' })};
+    --dropdown-bg-color: ${theme.apply({ dapa: '#101010', dark: 'var(--bg-color)', light: 'var(--bg-color)' })};
     --dropdown-text-color: var(--text-color);
     position: relative;
     white-space: nowrap;

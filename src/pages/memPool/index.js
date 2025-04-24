@@ -8,7 +8,7 @@ import Age from 'g45-react/components/age'
 import { useLang } from 'g45-react/hooks/useLang'
 
 import Table from '../../components/table'
-import { formatXelis, reduceText } from '../../utils'
+import { formatDapa, reduceText } from '../../utils'
 import Chart from '../../components/chart'
 import { useRecentBlocks } from '../../pages/home'
 import useTheme from '../../hooks/useTheme'
@@ -222,7 +222,7 @@ function PendingTxs(props) {
               </Link>
             </div>
           </td>
-          <td>{formatXelis(item.fee)}</td>
+          <td>{formatDapa(item.fee)}</td>
           <td>
             <Age timestamp={(item.first_seen || 0) * 1000} update format={{ secondsDecimalDigits: 0 }} />
           </td>
@@ -357,7 +357,7 @@ function ExecutedTxs(props) {
               <Link to={`/accounts/${tx.source}`}>{formatAddr(tx.source, 0, 7)}</Link>
             </div>
           </td>
-          <td>{formatXelis(tx.fee)}</td>
+          <td>{formatDapa(tx.fee)}</td>
           <td>
             <Age timestamp={block.timestamp} update format={{ secondsDecimalDigits: 0 }} />
           </td>

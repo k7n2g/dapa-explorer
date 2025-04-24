@@ -10,7 +10,7 @@ import { RPCEvent } from '@xelis/sdk/daemon/types'
 import useQueryString from 'g45-react/hooks/useQueryString'
 
 import TableFlex from '../../components/tableFlex'
-import { XELIS_ASSET, XELIS_ASSET_DATA, formatAsset, formatXelis, reduceText } from '../../utils'
+import { DAPA_ASSET, DAPA_ASSET_DATA, formatAsset, formatDapa, reduceText } from '../../utils'
 import Dropdown from '../../components/dropdown'
 import Button from '../../components/button'
 import PageTitle from '../../layout/page_title'
@@ -30,7 +30,7 @@ function loadAccount_SSR({ addr }) {
     const result = Object.assign({}, defaultResult)
     const [err, res] = await to(daemonRPC.getLastBalance({
       address: addr,
-      asset: XELIS_ASSET,
+      asset: DAPA_ASSET,
     }))
     result.err = err
     if (err) return result
@@ -60,9 +60,9 @@ function Account() {
   const [loading, setLoading] = useState(false)
   const [err, setErr] = useState()
   const [account, setAccount] = useState({})
-  const [accountAssets, setAccountAssets] = useState([XELIS_ASSET])
-  const [asset, setAsset] = useState(XELIS_ASSET)
-  const [assetData, setAssetData] = useState(XELIS_ASSET_DATA)
+  const [accountAssets, setAccountAssets] = useState([DAPA_ASSET])
+  const [asset, setAsset] = useState(DAPA_ASSET)
+  const [assetData, setAssetData] = useState(DAPA_ASSET_DATA)
   const [direction, setDirection] = useState(``)
   const [integrated, setIntegrated] = useState()
 
@@ -112,8 +112,8 @@ function Account() {
     const [err4, result4] = await to(nodeSocket.daemon.methods.getAccountAssets(addr))
     if (err4) return resErr(err4)
 
-    // we don't need to fetch asset decimals if it's xelis - we have it hardcoded
-    if (asset !== XELIS_ASSET) {
+    // we don't need to fetch asset decimals if it's dapa - we have it hardcoded
+    if (asset !== DAPA_ASSET) {
       const [err5, result5] = await to(nodeSocket.daemon.methods.getAsset({ asset }))
       if (err5) return resErr(err5)
       setAssetData(result5)
@@ -207,7 +207,7 @@ function AccountInfo(props) {
     return accountAssets.map((asset) => {
       return {
         key: asset,
-        text: `${reduceText(asset)}${asset === XELIS_ASSET ? ` (XEL)` : ``}`
+        text: `${reduceText(asset)}${asset === DAPA_ASSET ? ` (XEL)` : ``}`
       }
     })
   }, [accountAssets])
@@ -535,10 +535,10 @@ function History(props) {
                 return <><Icon name="lock" />&nbsp;&nbsp;{t(`ENCRYPTED`)}</>
               case "MINING":
                 const { mining } = item
-                return formatXelis(mining.reward)
+                return formatDapa(mining.reward)
               case "DEV_FEE":
                 const { dev_fee } = item
-                return formatXelis(dev_fee.reward)
+                return formatDapa(dev_fee.reward)
               case "BURN":
                 const { burn } = item
                 return formatAsset({ value: burn.amount, decimals })

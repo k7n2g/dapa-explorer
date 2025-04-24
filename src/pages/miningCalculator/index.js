@@ -7,7 +7,7 @@ import Age from 'g45-react/components/age'
 import useLocale from 'g45-react/hooks/useLocale'
 
 import { useNetworkInfo } from '../home'
-import { BLOCK_TIME, formatDifficulty, formatHashRate, formatXelis } from '../../utils'
+import { BLOCK_TIME, formatDifficulty, formatHashRate, formatDapa } from '../../utils'
 import PageTitle from '../../layout/page_title'
 
 import style from './style'
@@ -78,19 +78,19 @@ function MiningCalculator() {
             {t(`With {}H/s, you can probably find a block every`, [formatDifficulty(hashRate * hashRateUnit, { locale })])} <span className={style.miningReward.timeBlock}>{prettyMs(rewardData.timeUntilBlock * 1000 || 0, { compact: true })}</span>.
           </div>
           <div className={style.miningReward.specify}>
-            {t(`More precisely every {} with each block mining reward at {}.`, [prettyMs(rewardData.timeUntilBlock * 1000 || 0), formatXelis(info.miner_reward)])}
+            {t(`More precisely every {} with each block mining reward at {}.`, [prettyMs(rewardData.timeUntilBlock * 1000 || 0), formatDapa(info.miner_reward)])}
           </div>
           <div>{t(`This represent around:`)}</div>
           <ul className={style.miningReward.timeReward}>
-            <li>{formatXelis(rewardData.rewardPerHour)} / {t(`hour`)}</li>
-            <li>{formatXelis(rewardData.rewardPerDay)} / {t(`day`)}</li>
-            <li>{formatXelis(rewardData.rewardPerWeek)} / {t(`week`)}</li>
-            <li>{formatXelis(rewardData.rewardPerMonth)} / {t(`month`)}</li>
-            <li>{formatXelis(rewardData.rewardPerYear)} / {t(`year`)}</li>
+            <li>{formatDapa(rewardData.rewardPerHour)} / {t(`hour`)}</li>
+            <li>{formatDapa(rewardData.rewardPerDay)} / {t(`day`)}</li>
+            <li>{formatDapa(rewardData.rewardPerWeek)} / {t(`week`)}</li>
+            <li>{formatDapa(rewardData.rewardPerMonth)} / {t(`month`)}</li>
+            <li>{formatDapa(rewardData.rewardPerYear)} / {t(`year`)}</li>
           </ul>
           <div className={style.miningReward.explanation}>
             {t(`
-            XELIS operates using BlockDAG, meaning it's possible to have multiple block at the same height. These are called side blocks, and their rewards are lower than those of normal blocks. 
+            DAPA Coin operates using BlockDAG, meaning it's possible to have multiple block at the same height. These are called side blocks, and their rewards are lower than those of normal blocks. 
             This is not taken into account in the calculator. 
             The lower emission curve per block is also not taking into account when calculating for longer period.
             The dev fee is removed from the block reward calculation.

@@ -9,7 +9,7 @@ import layoutStyle from '../style/layout'
 import { logoBgUrl } from './header'
 
 const opacity = theme.apply({
-  xelis: `.6`,
+  dapa: `.6`,
   light: `.8`,
   dark: `.6`,
 })
@@ -79,7 +79,7 @@ const style = {
       padding: .7em;
       cursor: pointer;
       color: var(--text-color);
-      background-color: ${theme.apply({ xelis: `rgb(241 241 241 / 6%)`, dark: `rgb(241 241 241 / 6%)`, light: `rgb(8 8 8 / 6%)` })};
+      background-color: ${theme.apply({ dapa: `rgb(241 241 241 / 6%)`, dark: `rgb(241 241 241 / 6%)`, light: `rgb(8 8 8 / 6%)` })};
       border-radius: .5em;
       text-align: left;
       min-width: 130px;
@@ -133,7 +133,7 @@ const style = {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: ${theme.apply({ xelis: `rgb(241 241 241 / 6%)`, dark: `rgb(241 241 241 / 6%)`, light: `rgb(8 8 8 / 6%)` })};
+      background-color: ${theme.apply({ dapa: `rgb(241 241 241 / 6%)`, dark: `rgb(241 241 241 / 6%)`, light: `rgb(8 8 8 / 6%)` })};
 
       &:hover {
         opacity: 1;
@@ -184,7 +184,7 @@ function Footer(props) {
         <div>
           <div className={style.title}>{t('THEME')}</div>
           <div className={style.buttons}>
-            <button onClick={() => setTheme('xelis')} data-active={currentTheme === `xelis`}>
+            <button onClick={() => setTheme('dapa')} data-active={currentTheme === `dapa`}>
               {t('Default')}<Icon name="palette" />
             </button>
             <button onClick={() => setTheme('dark')} data-active={currentTheme === `dark`}>

@@ -178,7 +178,7 @@ function Home() {
   return <div>
     <Helmet>
       <title>{t(`Home`)}</title>
-      <meta name="description" content={t('Dive into the XELIS Explorer. Navigate the blockchain, verify transactions, and access specific metadata.')} />
+      <meta name="description" content={t('DAPA Explorer your entry to the blockchain, verify transactions, and access specific metadata.')} />
     </Helmet>
     <ExplorerSearch />
     <RecentBlocks blocks={blocks} newBlock={newBlock} info={info} />

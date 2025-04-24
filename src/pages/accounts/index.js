@@ -13,7 +13,7 @@ import useLocale from 'g45-react/hooks/useLocale'
 import TableFlex from '../../components/tableFlex'
 import { daemonRPC } from '../../node_rpc'
 import Pagination, { getPaginationRange } from '../../components/pagination'
-import { XELIS_ASSET } from '../../utils'
+import { DAPA_ASSET } from '../../utils'
 import PageTitle from '../../layout/page_title'
 import Hashicon from '../../components/hashicon'
 import EncryptedAmountModal from '../account/encrypted_amount_modal'
@@ -51,7 +51,7 @@ function loadAccounts_SSR({ pageState }) {
       const addr = addresses[i]
       const [err, res] = await to(daemonRPC.getBalance({
         address: addr,
-        asset: XELIS_ASSET
+        asset: DAPA_ASSET
       }))
       accounts.push({ addr, balance: (res || {}).result })
     }
@@ -119,7 +119,7 @@ function Accounts() {
       const addr = addresses[i]
       const [err, balance] = await to(nodeSocket.daemon.methods.getBalance({
         address: addr,
-        asset: XELIS_ASSET
+        asset: DAPA_ASSET
       }))
       accounts.push({ addr, balance })
     }

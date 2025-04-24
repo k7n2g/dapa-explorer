@@ -23,7 +23,7 @@ const style = {
     opacity: 0;
     transform: translateY(-100%);
     transition: all .25s;
-    backdrop-filter: blur(${theme.apply({ xelis: `40px`, light: `30px`, dark: `40px` })});
+    backdrop-filter: blur(${theme.apply({ dapa: `40px`, light: `30px`, dark: `40px` })});
     height: 100%;
     bottom: 0;
     overflow: auto;

@@ -10,22 +10,22 @@ export const reduceText = (text, maxLeft = 5, maxRight = 5) => {
   return start + `...` + end
 }
 
-export const XELIS_ASSET = `0000000000000000000000000000000000000000000000000000000000000000`
-export const XELIS_DECIMALS = 8
-export const XELIS_ASSET_DATA = { topoheight: 0, decimals: XELIS_DECIMALS }
+export const DAPA_ASSET = `0000000000000000000000000000000000000000000000000000000000000000`
+export const DAPA_DECIMALS = 8
+export const DAPA_ASSET_DATA = { topoheight: 0, decimals: DAPA_DECIMALS }
 
 export const shiftNumber = (value, decimals) => {
   return new BigNumber(value || 0).shiftedBy(-decimals)
 }
 
 // ENV is defined with esbuild from g45-react package
-export const XELIS_PREFIX = ENV === `testnet` ? `XET` : `XEL`
+export const DAPA_PREFIX = ENV === `testnet` ? `DAP` : `DAH`
 
-export const formatXelis = (value, { locale, withSuffix } = {}) => {
+export const formatDapa = (value, { locale, withSuffix } = {}) => {
   if (!withSuffix) withSuffix = true
 
-  const number = formatAsset({ value, decimals: XELIS_DECIMALS, locale })
-  return `${number}${withSuffix ? ` ${XELIS_PREFIX}` : ``}`
+  const number = formatAsset({ value, decimals: DAPA_DECIMALS, locale })
+  return `${number}${withSuffix ? ` ${DAPA_PREFIX}` : ``}`
 }
 
 export const formatAsset = ({ value, decimals, locale }) => {
@@ -34,8 +34,8 @@ export const formatAsset = ({ value, decimals, locale }) => {
 
 export const formatAssetName = (asset) => {
   switch (asset) {
-    case XELIS_ASSET:
-      return `${reduceText(asset)} (XEL)`
+    case DAPA_ASSET:
+      return `${reduceText(asset)} (DAPA)`
     default:
       return reduceText(asset)
   }
@@ -101,8 +101,8 @@ export const formatBlock = ({ block, topoheight, locale }) => {
   return {
     utcDate: new Date(block.timestamp).toLocaleString(locale, { timeZone: `UTC` }),
     miner: reduceText(block.miner),
-    totalFees: formatXelis(block.total_fees, { locale }), // if available (include_txs?)
-    reward: formatXelis(block.reward, { locale }),
+    totalFees: formatDapa(block.total_fees, { locale }), // if available (include_txs?)
+    reward: formatDapa(block.reward, { locale }),
     confirmations: block.topoheight != null ? topoheight - block.topoheight : 0,
     size: formatSize(block.total_size_in_bytes, { locale }),
     hasPreviousBlock: block.topoheight > 0,
@@ -146,9 +146,9 @@ export const parseAddressWithPort = (addr) => {
 
 export const fetchGeoLocation = async (ips) => {
   try {
-    ips.sort() // sort or the hash we not be the same
+    ips.sort() // sort or the hash will not be the same
     const query = `?ips=${ips.join(`,`)}`
-    const res = await fetch(`https://geoip.xelis.io${query}`)
+    const res = await fetch(`https://geoip.dapahe.com${query}`)
     const data = await res.json()
     return Promise.resolve(data)
   } catch (e) {

@@ -5,7 +5,7 @@ import DotLoading from '../dotLoading'
 import theme from '../../style/theme'
 import { displayError } from '../../utils'
 
-theme.xelis`
+theme.dapa`
   --table-th-bg-color: rgb(122 250 211);
   --table-td-bg-color: #0c0c0c;
 `
@@ -70,7 +70,7 @@ export const defaultStyle = {
       width: 100%;
       white-space: nowrap;
 
-      --table-hover-bg-color: ${theme.apply({ xelis: 'black', dark: '#373737', light: '#cbcbcb' })};
+      --table-hover-bg-color: ${theme.apply({ dapa: 'black', dark: '#373737', light: '#cbcbcb' })};
       --table-hover-text-color: var(--text-color);
     }
 
@@ -80,12 +80,12 @@ export const defaultStyle = {
       text-align: left;
       vertical-align: middle;
       background-color: var(--table-th-bg-color);
-      color: ${theme.apply({ xelis: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
+      color: ${theme.apply({ dapa: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
     }
 
     table thead tr {
       background-color: var(--table-th-bg-color);
-      color: ${theme.apply({ xelis: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
+      color: ${theme.apply({ dapa: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
     }
 
     table thead th {
@@ -102,7 +102,7 @@ export const defaultStyle = {
     }
 
     table td {
-      border-bottom: thin solid ${theme.apply({ xelis: '#232323', dark: '#2b2b2b', light: '#cbcbcb' })};
+      border-bottom: thin solid ${theme.apply({ dapa: '#232323', dark: '#2b2b2b', light: '#cbcbcb' })};
       background-color: var(--table-td-bg-color);
       padding: .8em 1em;
       color: var(--muted-color);

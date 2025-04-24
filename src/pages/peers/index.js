@@ -217,7 +217,7 @@ function Peers() {
     <PageTitle title={t('Peers')} subtitle={t('{} nodes', [peers.length])}
       metaDescription={t('Map with list of network peers. Monitor connected peers, network status and geo location.')} />
     <div>
-      <Icon name="warning" />{t(`This map does not represent the entire XELIS network.`)}
+      <Icon name="warning" />{t(`This map shows parts of the DAPA network.`)}
     </div>
     <div>
       <MapPeers mapRef={mapRef} peers={peers} geoLocation={geoLocation} peersLoading={peersLoading} geoLoading={geoLoading} />

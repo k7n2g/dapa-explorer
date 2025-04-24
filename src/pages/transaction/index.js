@@ -9,7 +9,7 @@ import { useLang } from 'g45-react/hooks/useLang'
 import useLocale from 'g45-react/hooks/useLocale'
 
 import Table from '../../components/table'
-import { formatXelis, reduceText, displayError, formatSize, formatAssetName } from '../../utils'
+import { formatDapa, reduceText, displayError, formatSize, formatAssetName } from '../../utils'
 import PageLoading from '../../components/pageLoading'
 import TableFlex from '../../components/tableFlex'
 import { daemonRPC } from '../../node_rpc'
@@ -149,7 +149,7 @@ function Transaction() {
           {
             key: 'fee',
             title: t('Fee'),
-            render: (value) => value ? formatXelis(value) : `--`
+            render: (value) => value ? formatDapa(value) : `--`
           },
           {
             key: 'size',
@@ -245,7 +245,7 @@ function Burn(props) {
         const { amount, asset } = item
         return <tr key={index}>
           <td>{formatAssetName(asset)}</td>
-          <td>{formatXelis(amount)}</td> {/* We assume it's native asset for now */}
+          <td>{formatDapa(amount)}</td> {/* We assume it's native asset for now */}
         </tr>
       }}
     />
@@ -308,7 +308,7 @@ function InBlocks(props) {
           <td><Link to={`/blocks/${item.hash}`}>{reduceText(item.hash)}</Link></td>
           <td style={{ color: getBlockColor(currentTheme, item.block_type) }}>{item.block_type}</td>
           <td>{size}</td>
-          <td>{formatXelis(item.total_fees)}</td>
+          <td>{formatDapa(item.total_fees)}</td>
           <td>{txCount}</td>
         </tr>
       }}

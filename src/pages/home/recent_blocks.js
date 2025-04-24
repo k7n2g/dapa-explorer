@@ -5,7 +5,7 @@ import Age from 'g45-react/components/age'
 import { useLang } from 'g45-react/hooks/useLang'
 import useLocale from 'g45-react/hooks/useLocale'
 
-import { formatSize, formatXelis } from '../../utils'
+import { formatSize, formatDapa } from '../../utils'
 import theme from '../../style/theme'
 import { bounceIn, slideX } from '../../style/animate'
 import Hashicon from '../../components/hashicon'
@@ -14,7 +14,7 @@ import { getBlockColor } from '../dag/blockColor'
 import { useTheme } from '../../hooks/useTheme'
 import { getBlockType } from '../dag'
 
-theme.xelis`
+theme.dapa`
   --block-bg-color: #0c0c0c;
   --block-text-color: white;
   --block-border-color: var(--link-color);
@@ -151,7 +151,7 @@ export function RecentBlocks(props) {
 
         const blockType = getBlockType(blocks, block, info.stableheight)
         const blockColor = getBlockColor(currentTheme, blockType)
-        const title = t(`This is a {} block and the reward is {}.`, [blockType, formatXelis(block.reward, { locale })])
+        const title = t(`This is a {} block and the reward is {}.`, [blockType, formatDapa(block.reward, { locale })])
 
         return <Link to={`/blocks/${block.hash}`} key={key} className={blockClassName}
           style={{ borderColor: blockColor }} title={title}>

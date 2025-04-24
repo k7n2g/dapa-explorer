@@ -10,7 +10,7 @@ import logoBlackUrl from '../../assets/black_background_white_logo.svg'
 import logoWhiteUrl from '../../assets/white_background_black_logo.svg'
 
 export const logoBgUrl = theme.apply({
-  xelis: `url('${logoWhiteUrl}')`,
+  dapa: `url('${logoWhiteUrl}')`,
   light: `url('${logoBlackUrl}')`,
   dark: `url('${logoWhiteUrl}')`,
 })
@@ -35,8 +35,8 @@ export const style = {
     }
   `,
   headerBg: css`
-    background-color: ${theme.apply({ xelis: `rgb(25 41 41 / 50%)`, light: `rgb(255 255 255 / 0%)`, dark: `rgb(0 0 0 / 40%)` })};
-    backdrop-filter: blur(${theme.apply({ xelis: `40px`, light: `20px`, dark: `40px` })});
+    background-color: ${theme.apply({ dapa: `rgb(25 41 41 / 50%)`, light: `rgb(255 255 255 / 0%)`, dark: `rgb(0 0 0 / 40%)` })};
+    backdrop-filter: blur(${theme.apply({ dapa: `40px`, light: `20px`, dark: `40px` })});
   `,
   list: css`
     display: flex;

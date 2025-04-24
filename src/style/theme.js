@@ -13,9 +13,9 @@ const query = {
 // Keep goober 2.1.10 or glob will replace CSS instead of append
 // https://github.com/cristianbote/goober/issues/496
 
-const xelis = (style) => {
+const dapa = (style) => {
   glob`
-    [data-theme="xelis"] {
+    [data-theme="dapa"] {
       ${style}
     }
   `
@@ -54,7 +54,7 @@ const apply = (values) => {
   return `var(--${name})`
 }
 
-export default { query, light, dark, xelis, apply }
+export default { query, light, dark, dapa, apply }
 
 light`
   --bg-color: #fafafa;
@@ -82,8 +82,8 @@ dark`
   --content-bg-color: rgb(12 12 12 / 50%);
 `
 
-xelis`
-  --bg-color: #1d3b37;
+dapa`
+  --bg-color: #121fd4;
   --text-color: #f1f1f1;
   --border-color: var(--text-color);
   --muted-color: rgb(255 255 255 / 50%);

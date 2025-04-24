@@ -9,7 +9,7 @@ import Age from 'g45-react/components/age'
 import { useLang } from 'g45-react/hooks/useLang'
 import useLocale from 'g45-react/hooks/useLocale'
 
-import { displayError, isHash, formatSize, formatXelis, formatBlock, reduceText, formatDifficulty } from '../../utils'
+import { displayError, isHash, formatSize, formatDapa, formatBlock, reduceText, formatDifficulty } from '../../utils'
 import PageLoading from '../../components/pageLoading'
 import Button from '../../components/button'
 import Transactions from './txs'
@@ -254,7 +254,7 @@ function Block() {
             title: t('Fees'),
             render: (value, item) => {
               // total_fees can be undefined even if block is valid - use hash to check instead
-              if (item.hash) return formatXelis(value || 0)
+              if (item.hash) return formatDapa(value || 0)
               return `--`
             }
           },
@@ -264,7 +264,7 @@ function Block() {
             title: t('Miner Reward'),
             render: (value) => {
               if (value) {
-                return formatXelis(value, { locale })
+                return formatDapa(value, { locale })
               }
 
               return `--`
@@ -275,7 +275,7 @@ function Block() {
             title: t('Dev Reward'),
             render: (value) => {
               if (value) {
-                return formatXelis(value, { locale })
+                return formatDapa(value, { locale })
               }
 
               return `--`
@@ -286,7 +286,7 @@ function Block() {
             title: t('Supply'),
             render: (value) => {
               if (value) {
-                return formatXelis(value, { locale })
+                return formatDapa(value, { locale })
               }
 
               return `--`

@@ -5,7 +5,7 @@ import prettyMs from 'pretty-ms'
 import useLocale from 'g45-react/hooks/useLocale'
 import BigNumber from 'bignumber.js'
 
-import { formatHashRate, formatSize, formatXelis } from '../../utils'
+import { formatHashRate, formatSize, formatDapa } from '../../utils'
 import Chart from '../../components/chart'
 import theme from '../../style/theme'
 import { formatMiner } from '../../utils/known_addrs'
@@ -146,8 +146,8 @@ export function RecentStats(props) {
       <Box title={t(`Txs`)} value={stats.txs} />
       <Box title={t(`Size`)} value={formatSize(stats.size, { locale })} />
       {/* Commenting out because fee is not supplied by the node and is always zero */}
-      {/*<Box title={t(`Fees`)} value={formatXelis(stats.fees, { withSuffix: false, locale })} />*/}
-      <Box title={t(`Reward`)} value={formatXelis(stats.reward, { withSuffix: false, locale })} />
+      {/*<Box title={t(`Fees`)} value={formatDapa(stats.fees, { withSuffix: false, locale })} />*/}
+      <Box title={t(`Reward`)} value={formatDapa(stats.reward, { withSuffix: false, locale })} />
       <Box title={t(`Block Types`)}>
         <div className={style.blockTypes}>
           <div style={{ color: getBlockColor(currentTheme, `Normal`) }}>
@@ -330,8 +330,8 @@ function HashrateChart(props) {
       {t(`Drastic swings in the nethash are caused by the Kalman Filter. For a more accurate representation of nethash and additional information about the filter, check the links below.`)}
     </div>
     <div>
-      <a href="https://stats.xelis.io/mining" target="_blank">{t(`Average Nethash`)}</a>&nbsp;&nbsp;
-      <a href="https://docs.xelis.io/features/difficulty-adjustment" target="_blank">{t(`Difficulty adjustment`)}</a>
+      <a href="https://stats.dapahe.com/mining" target="_blank">{t(`Average Nethash`)}</a>&nbsp;&nbsp;
+      <a href="https://docs.dapahe.com/features/difficulty-adjustment" target="_blank">{t(`Difficulty adjustment`)}</a>
     </div>
   </Box>
 }

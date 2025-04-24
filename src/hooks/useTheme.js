@@ -5,11 +5,11 @@ import useCookie from 'g45-react/hooks/useCookie'
 const Context = createContext()
 
 const validateTheme = (theme) => {
-  if ([`xelis`, `dark`, `light`].indexOf(theme) !== -1) {
+  if ([`dapa`, `dark`, `light`].indexOf(theme) !== -1) {
     return theme
   }
 
-  return `xelis`
+  return `dapa`
 }
 
 export const ThemeProvider = (props) => {

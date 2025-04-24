@@ -32,7 +32,7 @@ export function SubApp() {
 
 const routes = [
   {
-    element: <App title="XELIS Explorer" defaultSettings={defaultSettings}>
+    element: <App title="DAPA Explorer" defaultSettings={defaultSettings}>
       <SubApp />
     </App>,
     children: [

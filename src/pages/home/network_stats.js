@@ -9,7 +9,7 @@ import { useLang } from 'g45-react/hooks/useLang'
 import Age from 'g45-react/components/age'
 import useLocale from 'g45-react/hooks/useLocale'
 
-import { formatHashRate, formatXelis, formatDifficulty } from '../../utils'
+import { formatHashRate, formatDapa, formatDifficulty } from '../../utils'
 import theme from '../../style/theme'
 import { useTheme } from '../../hooks/useTheme'
 
@@ -136,12 +136,12 @@ export function NetworkStats(props) {
     const mined = ((data.circulating_supply || 0) * 100 / (maxSupply || 1))
 
     return [
-      { title: t(`Max Supply`), render: () => formatXelis(maxSupply, { withSuffix: false, locale }) },
-      { title: t(`Circulating Supply`), render: () => formatXelis(data.circulating_supply, { withSuffix: false, locale }) },
+      { title: t(`Max Supply`), render: () => formatDapa(maxSupply, { withSuffix: false, locale }) },
+      { title: t(`Circulating Supply`), render: () => formatDapa(data.circulating_supply, { withSuffix: false, locale }) },
       { title: t(`Mined`), render: () => `${mined.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}%` },
 
       { title: t(`Topo Height`), render: () => (data.topoheight || 0).toLocaleString(locale) },
-      { title: t(`Block Reward`), render: () => formatXelis(data.block_reward, { withSuffix: false, locale }) },
+      { title: t(`Block Reward`), render: () => formatDapa(data.block_reward, { withSuffix: false, locale }) },
       { title: t(`Mempool`), render: () => `${(data.mempool_size || 0).toLocaleString(locale)} tx` },
 
       { title: t(`Height`), render: () => (data.height || 0).toLocaleString(locale) },

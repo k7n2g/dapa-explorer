@@ -32,7 +32,7 @@ const style = {
     overflow: hidden;
     background-color: var(--bg-color);
     opacity: 1;
-    --bg-line-color: ${theme.apply({ xelis: '#21423d', dark: '#191919', light: '#efefef' })};
+    --bg-line-color: ${theme.apply({ dapa: '#21423d', dark: '#191919', light: '#efefef' })};
     background-image:  linear-gradient(var(--bg-line-color) 1px, transparent 1px), linear-gradient(to right, var(--bg-line-color) 1px, var(--bg-color) 1px);
     background-size: 20px 20px;
   `,
@@ -501,7 +501,7 @@ function DAG() {
   return <div>
     <Helmet>
       <title>DAG</title>
-      <meta name="description" content={t(`XELIS BlockDAG inspector. Visualize a section of the network's blocks in 2D.`)} />
+      <meta name="description" content={t(`DAPA BlockDAG inspector. Visualize a section of the network's blocks in 2D.`)} />
     </Helmet>
     <div className={style.canvas}>
       <Canvas style={{ cursor }} orthographic

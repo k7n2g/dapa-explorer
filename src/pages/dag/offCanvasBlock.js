@@ -5,7 +5,7 @@ import { css } from 'goober'
 import { useLang } from 'g45-react/hooks/useLang'
 import { useNodeSocket } from '@xelis/sdk/react/daemon'
 
-import { formatBlock, formatXelis, formatDifficulty } from '../../utils'
+import { formatBlock, formatDapa, formatDifficulty } from '../../utils'
 import { pools } from '../../utils/known_addrs'
 import OffCanvas from '../../components/offCanvas'
 import Button from '../../components/button'
@@ -145,7 +145,7 @@ function useOffCanvasBlock(props) {
         <div>
           <div>{t('Fees')}</div>
           <div>
-            {formatXelis(block.total_fees)}
+            {formatDapa(block.total_fees)}
           </div>
         </div>
         <div>
@@ -155,7 +155,7 @@ function useOffCanvasBlock(props) {
         <div>
           <div>{t('Supply')}</div>
           <div>
-            {formatXelis(block.supply)}
+            {formatDapa(block.supply)}
           </div>
         </div>
         <div>

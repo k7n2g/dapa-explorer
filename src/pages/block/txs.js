@@ -5,7 +5,7 @@ import { css } from 'goober'
 import { useNodeSocket } from '@xelis/sdk/react/daemon'
 import { useLang } from 'g45-react/hooks/useLang'
 
-import { formatXelis, reduceText } from '../../utils'
+import { formatDapa, reduceText } from '../../utils'
 import Table from '../../components/table'
 import Pagination, { getPaginationRange } from '../../components/pagination'
 import Hashicon from '../../components/hashicon'
@@ -102,7 +102,7 @@ function Transactions(props) {
                 </Link>
               </div>
             </td>
-            <td>{formatXelis(item.fee)}</td>
+            <td>{formatDapa(item.fee)}</td>
           </tr>
         </React.Fragment>
       }}

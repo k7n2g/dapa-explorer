@@ -73,7 +73,7 @@ export default {
   },
   miningReward: {
     container: css`
-      background: ${theme.apply({ xelis: `#000000c9`, dark: `#000000c9`, light: `#ffffff7a` })};
+      background: ${theme.apply({ dapa: `#000000c9`, dark: `#000000c9`, light: `#ffffff7a` })};
       padding: 1em;
       border-bottom-right-radius: 1em;
       border-bottom-left-radius: 1em;

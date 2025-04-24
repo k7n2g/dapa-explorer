@@ -1,7 +1,7 @@
 {
-  "name": "xelis-explorer",
-  "version": "0.2.111",
-  "description": "Official Explorer for XELIS Blockchain.",
+  "name": "dapa-explorer",
+  "version": "1.0.0",
+  "description": "Official Explorer for DAPA Coin Blockchain.",
   "scripts": {
     "make-lang": "node ./node_modules/g45-react/lang-dict.js --src ./src --outfile ./lang/en.json",
     "bundle": "shx cp -n ./env/local_dev.json ./bundler-define.json && node ./node_modules/g45-react/bundler.js --entry ./src/routes.js",
@@ -18,7 +18,7 @@
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.9",
     "@tweenjs/tween.js": "^21.0.0",
-    "@xelis/sdk": "^0.9.11",
+    "@xelis/sdk": "^0.10.3",
     "await-to-js": "^3.0.0",
     "bignumber.js": "^9.1.2",
     "chart.js": "^4.2.1",
@@ -39,11 +39,15 @@
     "react-router-dom": "^6.7.0",
     "reset-css": "^5.0.1",
     "store2": "^2.14.2",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
     "g45-react": "^0.1.19",
     "shx": "^0.3.4",
     "wrangler": "^3.60.1"
+  },
+  "optionalDependencies": {
+    "bufferutil": "^4.0.9"
   }
 }

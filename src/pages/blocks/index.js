@@ -12,7 +12,7 @@ import useQueryString from 'g45-react/hooks/useQueryString'
 import hashIt from 'hash-it'
 import useLocale from 'g45-react/hooks/useLocale'
 
-import { formatHashRate, formatSize, formatXelis, groupBy, reduceText } from '../../utils'
+import { formatHashRate, formatSize, formatDapa, groupBy, reduceText } from '../../utils'
 import Pagination, { getPaginationRange } from '../../components/pagination'
 import TableFlex from '../../components/tableFlex'
 import { daemonRPC } from '../../node_rpc'
@@ -297,7 +297,7 @@ function Blocks() {
         {
           key: 'total_fees',
           title: t('Fees'),
-          render: (value) => formatXelis(value)
+          render: (value) => formatDapa(value)
         },
         */
         {
@@ -315,7 +315,7 @@ function Blocks() {
         {
           key: 'reward',
           title: t('Reward'),
-          render: (value) => formatXelis(value, { locale })
+          render: (value) => formatDapa(value, { locale })
         },
         {
           key: 'difficulty',

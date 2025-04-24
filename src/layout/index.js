@@ -40,15 +40,15 @@ function Layout() {
 
   const footerProps = useMemo(() => {
     return {
-      title: t('XELIS Explorer'),
-      description: t(`The explorer allows to track and verify transactions on the XELIS network. You can search for specific transactions and monitor the overall health of the network.`),
+      title: t('DAPA Explorer'),
+      description: t(`The explorer allows you to track and verify transactions on DAPA network. You can search for specific transactions and monitor the overall health of the network.`),
       version: `v${packageJSON.version}`,
       links: [
-        { href: `https://xelis.io`, title: t('Home'), icon: <Icon name="home" /> },
+        { href: `https://dapahe.com`, title: t('Home'), icon: <Icon name="home" /> },
         { href: STATS_LINK, title: t('Statistics'), icon: <Icon name="chart-simple" /> },
-        { href: `https://docs.xelis.io`, title: t('Documentation'), icon: <Icon name="book" /> },
-        { href: `https://github.com/xelis-project`, title: `GitHub`, icon: <Icon name="github" type="brands" /> },
-        { href: `https://discord.gg/z543umPUdj`, title: `Discord`, icon: <Icon name="discord" type="brands" /> },
+        { href: `https://docs.dapahe.com`, title: t('Documentation'), icon: <Icon name="book" /> },
+        { href: `https://github.com/k7n2g/dapa`, title: `GitHub`, icon: <Icon name="github" type="brands" /> },
+        { href: `https://discord.gg/`, title: `Discord`, icon: <Icon name="discord" type="brands" /> },
       ],
       pages: links
     }

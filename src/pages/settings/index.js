@@ -31,13 +31,13 @@ function Settings() {
   }, [setValue, nodeEnpoint])
 
   return <div>
-    <PageTitle title={t('Settings')} subtitle={t('This page allows you to change explorer settings.')}
+    <PageTitle title={t('Settings')} subtitle={t('This page allows you to Connect to other Nodes.')}
       metaDescription={t('Set your preferences, manage notifications and other controls.')} />
     <div className={style.formItems}>
       <div className={style.formInput}>
         <label>{t('Node Endpoint')}</label>
         <span>
-          {t('Enter the websocket connection endpoint of a XELIS node. Usually, `wss://ip:port/json_rpc` depending on the server configuration.')}
+          {t('Enter the websocket connection endpoint of a DAPA node. Usually, `wss://ip:port/json_rpc` depending on the server configuration.')}
         </span>
         <input type="text" value={nodeEnpoint} onChange={(e) => {
           setNodeEndpoint(e.target.value)

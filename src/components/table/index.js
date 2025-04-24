@@ -8,7 +8,7 @@ import { displayError } from '../../utils'
 export const defaultStyle = {
   container: css`
     overflow: auto;
-    --table-hover-bg-color: ${theme.apply({ xelis: 'black', dark: '#373737', light: '#cbcbcb' })};
+    --table-hover-bg-color: ${theme.apply({ dapa: 'black', dark: '#373737', light: '#cbcbcb' })};
     --table-hover-text-color: var(--text-color);
     border-radius: .5em;
 
@@ -20,8 +20,8 @@ export const defaultStyle = {
 
     table thead {
       tr {
-        background-color: ${theme.apply({ xelis: 'rgb(122 250 211)', dark: '#373737', light: '#cbcbcb' })};
-        color: ${theme.apply({ xelis: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
+        background-color: ${theme.apply({ dapa: 'rgb(122 250 211)', dark: '#373737', light: '#cbcbcb' })};
+        color: ${theme.apply({ dapa: 'var(--bg-color)', dark: '#f1f1f1', light: '#1c1c1c' })};
         position: sticky;
         top: 0;
       }
@@ -43,8 +43,8 @@ export const defaultStyle = {
     }
 
     table tbody td {
-      border-bottom: thin solid ${theme.apply({ xelis: '#232323', dark: '#2b2b2b', light: '#cbcbcb' })};
-      background-color: ${theme.apply({ xelis: '#0c0c0c', dark: '#0e0e0e', light: '#f5f5f5' })};
+      border-bottom: thin solid ${theme.apply({ dapa: '#232323', dark: '#2b2b2b', light: '#cbcbcb' })};
+      background-color: ${theme.apply({ dapa: '#0c0c0c', dark: '#0e0e0e', light: '#f5f5f5' })};
       padding: .8em 1em;
       color: var(--muted-color);
       vertical-align: middle;

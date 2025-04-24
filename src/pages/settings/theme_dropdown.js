@@ -12,7 +12,7 @@ function ThemeDropdown(props) {
 
   const themes = useMemo(() => {
     return [
-      { key: `xelis`, text: <><Icon name="palette" />&nbsp;&nbsp;{t(`Default`)}</> },
+      { key: `dapa`, text: <><Icon name="palette" />&nbsp;&nbsp;{t(`Default`)}</> },
       { key: `dark`, text: <><Icon name="moon" />&nbsp;&nbsp;{t(`Dark`)}</> },
       { key: `light`, text: <><Icon name="sun" />&nbsp;&nbsp;{t(`Light`)}</> }
     ]

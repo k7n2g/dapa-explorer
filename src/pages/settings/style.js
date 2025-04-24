@@ -33,8 +33,8 @@ export default {
       border: none;
       outline: none;
       font-size: 1em;
-      background-color: ${theme.apply({ xelis: `var(--text-color)`, dark: `var(--text-color)`, light: `var(--bg-color)` })};
-      color: ${theme.apply({ xelis: `var(--bg-color)`, dark: `var(--bg-color)`, light: `var(--text-color)` })};
+      background-color: ${theme.apply({ dapa: `var(--text-color)`, dark: `var(--text-color)`, light: `var(--bg-color)` })};
+      color: ${theme.apply({ dapa: `var(--bg-color)`, dark: `var(--bg-color)`, light: `var(--text-color)` })};
       box-shadow: inset 3px 3px 5px 0px #a5a5a5;
 
       ${theme.query.minMobile} {

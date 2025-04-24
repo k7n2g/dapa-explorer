@@ -14,27 +14,27 @@ glob`
   }
 
   .marker-cluster-small {
-    background-color: ${theme.apply({ xelis: '#3a7d1bba', dark: '#3a7d1bba', light: '#3a7d1bba' })};
+    background-color: ${theme.apply({ dapa: '#3a7d1bba', dark: '#3a7d1bba', light: '#3a7d1bba' })};
   }
 
   .marker-cluster-small div {
-    background-color: ${theme.apply({ xelis: '#3a7d1b', dark: '#3a7d1b', light: '#3a7d1b' })};
+    background-color: ${theme.apply({ dapa: '#3a7d1b', dark: '#3a7d1b', light: '#3a7d1b' })};
   }
 
   .marker-cluster-medium {
-    background-color: ${theme.apply({ xelis: '#3675c8ba', dark: '#3675c8ba', light: '#3675c8ba' })};
+    background-color: ${theme.apply({ dapa: '#3675c8ba', dark: '#3675c8ba', light: '#3675c8ba' })};
   }
 
   .marker-cluster-medium div {
-    background-color: ${theme.apply({ xelis: '#3675c8', dark: '#3675c8', light: '#3675c8' })};
+    background-color: ${theme.apply({ dapa: '#3675c8', dark: '#3675c8', light: '#3675c8' })};
   }
 
   .marker-cluster-large {
-    background-color: ${theme.apply({ xelis: '#be4d29bf', dark: '#be4d29bf', light: '#be4d29bf' })};
+    background-color: ${theme.apply({ dapa: '#be4d29bf', dark: '#be4d29bf', light: '#be4d29bf' })};
   }
 
   .marker-cluster-large div {
-    background-color: ${theme.apply({ xelis: '#be4d29', dark: '#be4d29', light: '#be4d29' })};
+    background-color: ${theme.apply({ dapa: '#be4d29', dark: '#be4d29', light: '#be4d29' })};
   }
 `
 

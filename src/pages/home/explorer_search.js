@@ -68,7 +68,7 @@ const style = {
       transition: .2s all;
       padding: 0 2em;
       border-radius: 2em;
-      background: ${theme.apply({ xelis: '#101a1a', dark: '#0c0c0c', light: '#e7e7e7' })};
+      background: ${theme.apply({ dapa: '#101a1a', dark: '#0c0c0c', light: '#e7e7e7' })};
       color: var(--text-color);
 
       &:hover {
@@ -181,7 +181,7 @@ export function ExplorerSearch() {
   }, [nodeSocket.readyState, searchValue, isBlockNumber])
 
   return <div className={style.container}>
-    <div className={style.title}>{t('XELIS Explorer')}</div>
+    <div className={style.title}>{t('DAPA Explorer')}</div>
     {isFocus && <div className={style.backdrop} />}
     <form onSubmit={searchBlock} onBlur={onBlur} data-focus={isFocus} className={style.form}>
       <input onFocus={onFocus} value={searchValue} onChange={onSearchValueChange} type="text" name="value"

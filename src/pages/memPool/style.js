@@ -9,13 +9,13 @@ export default {
     border: none;
     outline: none;
     font-size: 1.2em;
-    background-color: ${theme.apply({ xelis: `rgb(0 0 0 / 20%)`, light: `rgb(255 255 255 / 20%)`, dark: `rgb(0 0 0 / 20%)` })};
+    background-color: ${theme.apply({ dapa: `rgb(0 0 0 / 20%)`, light: `rgb(255 255 255 / 20%)`, dark: `rgb(0 0 0 / 20%)` })};
     color: var(--text-color);
     width: 100%;
-    border: 2px solid ${theme.apply({ xelis: `#7afad3`, light: `#cbcbcb`, dark: `#373737` })};
+    border: 2px solid ${theme.apply({ dapa: `#7afad3`, light: `#cbcbcb`, dark: `#373737` })};
 
     &::placeholder {
-      color: ${theme.apply({ xelis: `rgb(255 255 255 / 20%)`, light: `rgb(0 0 0 / 30%)`, dark: `rgb(255 255 255 / 20%)` })};
+      color: ${theme.apply({ dapa: `rgb(255 255 255 / 20%)`, light: `rgb(0 0 0 / 30%)`, dark: `rgb(255 255 255 / 20%)` })};
       opacity: 1;
     }
   `,

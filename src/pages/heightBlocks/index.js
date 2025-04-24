@@ -9,7 +9,7 @@ import Icon from 'g45-react/components/fontawesome_icon'
 
 import { daemonRPC } from '../../node_rpc'
 import PageTitle from '../../layout/page_title'
-import { formatSize, formatXelis, reduceText } from '../../utils'
+import { formatSize, formatDapa, reduceText } from '../../utils'
 import { formatMiner } from '../../utils/known_addrs'
 import { getBlockColor } from '../dag/blockColor'
 import useTheme from '../../hooks/useTheme'
@@ -109,7 +109,7 @@ function HeightBlocks() {
           </div>
           <div>
             <div className={style.item.title}>{t(`Reward`)}</div>
-            <div className={style.item.value}>{formatXelis(block.miner_reward)}</div>
+            <div className={style.item.value}>{formatDapa(block.miner_reward)}</div>
           </div>
           <div>
             <div className={style.item.title}>{t(`Miner`)}</div>
